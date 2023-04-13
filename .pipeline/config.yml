@@ -1,0 +1,14 @@
+general:
+  verbose: true  
+
+steps:
+  mtaBuild:
+    buildTarget: 'CF'
+    
+  cloudFoundryDeploy:
+    deployTool: 'mtaDeployPlugin'
+    deployType: 'standard'
+    cfOrg: "bf600639trial"
+    cfSpace: 'dev'
+    cfApiEndpoint: https://api.cf.us10.hana.ondemand.com
+    cfCredentialsId: 'CF_CREDENTIALSID'
