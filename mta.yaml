@@ -23,11 +23,11 @@ modules:
       - name: my-bookshop-auth
       - name: my-bookshop-db
 
-  - name: my-bookshop-db-deployer
+  - name: my-bookshop-db-deployer 
     type: hdb
     path: gen/db
     parameters:
-      buildpack: nodejs_buildpack
+      buildpack: nodejs_buildpack 
     requires:
       - name: my-bookshop-db
 
