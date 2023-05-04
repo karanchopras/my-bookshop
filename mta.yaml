@@ -55,7 +55,7 @@ resources:
       service-plan: application
       path: ./xs-security.json
       config:
-        xsappname: my-bookshop-${org}-${space}
+        xsappname: my-bookshop-${space}
         tenant-mode: dedicated
   - name: my-bookshop-db
     type: com.sap.xs.hdi-container
