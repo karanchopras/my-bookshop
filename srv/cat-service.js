@@ -12,7 +12,7 @@ module.exports = (srv) => {
           .set   ({ stock: {'-=': order.amount}})
           .where ({ stock: {'>=': order.amount},/*and*/ ID: order.book_ID})
       )
-      if (affectedRows === 0)  req.error (409, "Sold out, we are sorry")
+      if (affectedRows === 0)  req.error (409, "Sold out, sorry")
     })
   
     // Add some discount for overstocked books
