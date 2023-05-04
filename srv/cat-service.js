@@ -12,13 +12,13 @@ module.exports = (srv) => {
           .set   ({ stock: {'-=': order.amount}})
           .where ({ stock: {'>=': order.amount},/*and*/ ID: order.book_ID})
       )
-      if (affectedRows === 0)  req.error (409, "Sold out, sorry")
+      if (affectedRows === 0)  req.error (409, "Sold out, we are sorry")
     })
   
     // Add some discount for overstocked books
     srv.after ('READ', 'Books', each => {
       if (each.stock > 111)  each.title += ' -- 11% discount!'
-    })
+    }) 
   
   }
   
